@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+import { HomePage } from "../home/home";
 
 @Component({
   selector: 'page-signup',
@@ -6,8 +9,12 @@ import { Component } from '@angular/core';
 })
 export class SignUpPage {
 
-  constructor() {
+  constructor(private nav:NavController) {
+    this.nav = nav;
   }
 
 
+  move_to_home() {
+    this.nav.push(HomePage);
+  }
 }

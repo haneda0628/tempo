@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LinkPage } from '../link/link';
 import { SignUpPage } from '../signup/signup';
+import { HomePage } from "../home/home";
+
 
 @Component({
   selector: 'page-start',
@@ -19,5 +21,9 @@ export class StartPage {
 
   move_to_singup() {
     this.nav.push(SignUpPage);
+  }
+
+  move_to_home() {
+    this.nav.push(HomePage);
   }
 }

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+import { HomePage } from "../home/home";
 
 @Component({
   selector: 'page-link',
@@ -6,7 +9,8 @@ import { Component } from '@angular/core';
 })
 export class LinkPage {
 
-  constructor() {
+  constructor(private nav:NavController) {
+    this.nav = nav;
   }
 
 

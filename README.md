@@ -1,3 +1,6 @@
+2017/2/19 00004
+* home画面までの遷移ドラフト完成
+
 2017/2/19 00003
 * signup追加
 
@@ -9,6 +12,12 @@ Also delete the contents of your www folder and then run ionic serve to regenera
 This will ensure your project build is clean.
 
 If that doesn't work, try updating your ionic-cli to the latest version by running npm install -g ionic@2.1.0 then try the above again.
+
+[コマンド]
+rm -rf node_modules
+npm install
+rm -rf www
+ionic serve
 
 2017/2/12 00002
 * 連携ページ作成完了
