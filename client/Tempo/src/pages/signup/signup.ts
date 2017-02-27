@@ -13,8 +13,8 @@ export class SignUpPage {
     this.nav = nav;
   }
 
-
   move_to_home() {
+    console.log("go to home.");
     this.nav.push(HomePage);
   }
 }

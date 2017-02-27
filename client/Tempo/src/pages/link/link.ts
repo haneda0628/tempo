@@ -11,7 +11,12 @@ export class LinkPage {
 
   constructor(private nav:NavController) {
     this.nav = nav;
+
   }
 
+  move_to_home() {
+    console.log("go to home.");
+    this.nav.push(HomePage)
+  }
 
 }
