@@ -1,8 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform,MenuController,Nav } from 'ionic-angular';
-import { ContactPage } from '../contact/contact';
-import { LinkPage } from '../link/link';
+
+import { PortalPage } from '../portal/portal';
+import { StampPage } from '../stamp/stamp';
+import { CardPage } from '../card/card';
+import { AccessPage } from '../access/access';
+import { MessagePage } from '../message/message';
+import { SettingsPage } from '../settings/settings';
+import { CouponPage } from '../coupon/coupon';
+import { NewsPage } from '../news/news';
+
 
 @Component({
   selector: 'page-home',
@@ -10,10 +17,8 @@ import { LinkPage } from '../link/link';
 })
 
 export class HomePage {
-  //@ViewChild(Nav) nav: Nav;
-  //@ViewChild(Nav) nav: Nav;
   @ViewChild(Nav) nav:Nav;
-  rootPage: any = ContactPage;
+  rootPage: any = PortalPage;
 
   pages : Array<{title : string, component : any}>;
   constructor(
@@ -24,9 +29,22 @@ export class HomePage {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: HomePage },
-      { title: 'Page Two', component: LinkPage }
+      { title: 'HOME', component: HomePage },
+      { title: 'モバイル会員証', component: CardPage },
+      { title: 'スタンプ', component: StampPage },
+      { title: 'ニュース', component:NewsPage},
+      { title: 'クーポン一覧', component:CouponPage},
+      { title: 'メッセージ', component:MessagePage},
+      { title: 'アクセス', component:AccessPage},
+      { title: '設定', component:SettingsPage},
     ];
+  }
+
+  openPage(page) {
+    // close the menu when clicking a link from the menu
+    this.menu.close();
+    // navigate to the new page if it is not the current page
+    this.nav.setRoot(page.component);
   }
 
 }
