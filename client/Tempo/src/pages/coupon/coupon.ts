@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { HomePage } from "../home/home";
+import { CouponDetailPage} from "../coupon-detail/coupon-detail";
 
 @Component({
   selector: 'page-coupon',
@@ -14,9 +14,9 @@ export class CouponPage {
 
   }
 
-  move_to_home() {
+  move_to_coupon_detail() {
     console.log("go to home.");
-    this.nav.push(HomePage)
+    this.nav.push(CouponDetailPage)
   }
 
 }

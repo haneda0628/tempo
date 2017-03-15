@@ -1,29 +1,37 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+    <button ion-button style="height:100%;" menuToggle>
+      <img src="../assets/images/a-19.png" style="vertical-align: middle;"/>
     </button>
-    <ion-title>Page One</ion-title>
+    <ion-title style="padding:0;">
+      <img src="../assets/images/a-21.png" style="width:40%;"/>
+      <img src="../assets/images/a-20.png" style="width:25%;"/>
+      <span style="color:#fff;width:25%;">600pt</span>
+      <img src="../assets/images/a-18.png"/>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <div style="text-align: center;">
+    <h1 style="padding-top:0.5em;padding-bottom: 0.5em;margin:0;background-color:#2E8CD0; color:#FFF;">クーポン情報</h1>
+  </div>
+
+
   <ion-list>
-    <ion-item>
-      <ion-label fixed>電話番号</ion-label>
-      <ion-input type="tel" value=""></ion-input>
-    </ion-item>
+    <ion-item style="background-color: #FDFAB4;" (click)="move_to_coupon_detail();">
+      <ion-thumbnail item-left>
+        <img src="../assets/images/a-41.png">
+      </ion-thumbnail>
+      <div style="padding-right:10px;">
+        <h3 style="padding:0;margin:0;">20% OFFクーポン</h3>
+        <p style="padding:0;margin:0;">クーポンの説明</p>
 
-    <ion-item>
-      <ion-label fixed>メールアドレス</ion-label>
-      <ion-input type="email"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label fixed>パスワード</ion-label>
-      <ion-input type="password"></ion-input>
+        <b style="font-size:80%;">発効日：2017/2/2</b><br/>
+        <b style="font-size:80%;">期限　：2017/3/2</b><br/>
+        <b style="color:#F40000;float:right; font-size:80%;">クーポンの詳細を表示 &gt;</b>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>
 
-<button ion-button full class="link-button" (click)="move_to_home();">連携</button>

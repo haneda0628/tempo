@@ -16,4 +16,14 @@ page-start {
     height : 60px;
   }
 
+  #startButton {
+    position: absolute;
+    width:100%;
+    bottom: 0;
+  }
+
+  .toolbar-background {
+    background-color: #15258F;
+  }
+
 }

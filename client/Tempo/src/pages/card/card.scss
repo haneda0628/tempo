@@ -1,3 +1,16 @@
 page-card {
+  .toolbar-background {
+    background-color: #15258F;
+  }
 
+  .card-space {
+    background-image: url('../assets/images/a-36-2.png');
+    background-size:cover;
+    width:100%;
+    background-repeat: no-repeat;
+    padding:0;
+    margin-top:-5px;
+    text-align: center;
+    vertical-align: text-bottom;
+  }
 }

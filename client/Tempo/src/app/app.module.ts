@@ -14,6 +14,7 @@ import { AccessPage } from '../pages/access/access';
 import { MessagePage } from '../pages/message/message';
 import { SettingsPage } from '../pages/settings/settings';
 import { CouponPage } from '../pages/coupon/coupon';
+import { CouponDetailPage } from '../pages/coupon-detail/coupon-detail';
 import { NewsPage } from '../pages/news/news';
 
 @NgModule({
@@ -32,7 +33,9 @@ import { NewsPage } from '../pages/news/news';
     MessagePage,
     SettingsPage,
     CouponPage,
+    CouponDetailPage,
     NewsPage,
+
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -53,6 +56,7 @@ import { NewsPage } from '../pages/news/news';
     MessagePage,
     SettingsPage,
     CouponPage,
+    CouponDetailPage,
     NewsPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
