@@ -6,7 +6,7 @@
 
 <ion-content>
   <div>
-    <img style="top:0; width:100%; height:auto;" src="../assets/images/a-13.png"/>
+    <img style="top:0; width:100%; height:auto;" src="assets/images/a-13.png"/>
   </div>
   <div>
     <div style="text-align:center;">
@@ -15,21 +15,21 @@
     <ion-list>
       <ion-item>
         <ion-label fixed>電話番号</ion-label>
-        <ion-input type="tel" value=""></ion-input>
+        <ion-input type="tel" value="" [(ngModel)]="tel"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label fixed>メールアドレス</ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label fixed>パスワード</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
       </ion-item>
     </ion-list>
   </div>
-  <button ion-button block clear style="width:100%; height:108px;" (click)="move_to_home();">
-    <img style="margin:auto; width:50%; height:auto;" src="../assets/images/a-14.png"/>
+  <button ion-button block clear style="width:100%; height:108px;" (click)="link_to_site();">
+    <img style="margin:auto; width:50%; height:auto;" src="assets/images/a-14.png"/>
   </button>
 </ion-content>

@@ -1,25 +1,70 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar align-title="center">
     <button ion-button style="height:100%;" menuToggle>
-      <img src="../assets/images/a-19.png" style="vertical-align: middle;"/>
+      <img src="assets/images/a-19.png" style="vertical-align: middle;"/>
     </button>
     <ion-title style="padding:0;">
-      <img src="../assets/images/a-21.png" style="width:40%;"/>
-      <img src="../assets/images/a-20.png" style="width:25%;"/>
-      <span style="color:#fff;width:25%;">600pt</span>
-      <img src="../assets/images/a-18.png"/>
+      <img src="assets/images/a-21.png" style="width:30%; float:left;" padding-vertical/>
+      <img src="assets/images/a-20.png" style="width:25%; float:left;" padding-vertical/>
+      <span style="color:#fff;">600pt</span>
+      <img src="assets/images/a-18.png" style="float:right;" padding-vertical/>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <div style="background-image: url('../assets/images/a-40.png'); width:100%; background-repeat: no-repeat; background-size: contain; padding: 30% 0% 35% 0%;">
-    <div >あああああ</div>
-    <div style="padding-top:5%">怒ってるの？</div>
+<ion-content style="background-color: #F4EBC7;">
+  <!--
+  <div style="background-image: url('assets/images/a-40.png'); width:100%; background-repeat: no-repeat; background-size: contain; padding: 30% 0% 35% 0%;">
+    <div ></div>
+    <div style="padding-top:5%"></div>
   </div>
 
   <button ion-button block clear style="width:100%; height:108px;" (click)="move_to_home();">
-    <img style="margin:auto; width:50%; height:auto;" src="../assets/images/a-42.png"/>
+    <img style="margin:auto; width:50%; height:auto;" src="assets/images/a-42.png"/>
   </button>
+-->
+
+  <div style="background-image: url('assets/images/a-40-1.png') ">
+    <table>
+      <tr>
+        <td style="width:30%">
+          <img src="assets/images/a-41.png" style="width:70px;height:70px;margin:20px;"/>
+        </td>
+        <td>
+          <span style="color:#FFF; font-size:20px;">20%引きクーポン</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div style="background-color:#00B4F0;margin-top:-5px;padding-bottom:20px;">
+    <div class="coupon-box" style="width:90%; padding:5px; background-repeat: no-repeat; margin:auto; background-color:#FFF;margin:auto;margin-top:0px;margin-bottom:5px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;">
+      aaaaaaaa<br/>
+      aaaaaaaa
+    </div>
+    <div class="coupon-box" style="vertical-align: top; width:90%; padding:5px; background-repeat: no-repeat; margin:auto; background-color:#FFF;margin:auto;margin-top:5px;margin-bottom:0px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;">
+      <table class="" style="width:90%">
+        <tr>
+          <td style="width:30%;">提示条件</td>
+          <td>提示条件１</td>
+        </tr>
+        <tr>
+          <td>利用条件：</td>
+          <td>
+            <p>利用条件１</p>
+            <p>利用条件２</p>
+          </td>
+        </tr>
+        <tr>
+          <td>有効期限</td>
+          <td><p>利用条件１</p></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <img src="assets/images/a-40-4.png"/>
+  <button ion-button block clear style="width:100%; height:108px;" (click)="move_to_home();">
+    <img style="margin:auto; width:50%; height:auto;" src="assets/images/a-42.png"/>
+  </button>
+
 </ion-content>
 

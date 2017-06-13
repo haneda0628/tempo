@@ -13,4 +13,11 @@ page-coupon-detail {
     background-color: #15258F;
   }
 
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color:#FFF;
+  }
+
+  .coupon-box {
+    background-color:#FFF;margin:auto;margin-top:5px;margin-bottom:5px;border-radius: 10px;-webkit-border-radius: 10px;-moz-border-radius: 10px;   /* Firefox用 */
+  }
 }

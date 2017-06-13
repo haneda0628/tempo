@@ -16,6 +16,9 @@ import { SettingsPage } from '../pages/settings/settings';
 import { CouponPage } from '../pages/coupon/coupon';
 import { CouponDetailPage } from '../pages/coupon-detail/coupon-detail';
 import { NewsPage } from '../pages/news/news';
+import { NewsDetailPage } from '../pages/news-detail/news-detail';
+import { Storage } from '@ionic/storage';
+
 
 @NgModule({
   declarations: [
@@ -35,10 +38,10 @@ import { NewsPage } from '../pages/news/news';
     CouponPage,
     CouponDetailPage,
     NewsPage,
-
+    NewsDetailPage,
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,7 +61,13 @@ import { NewsPage } from '../pages/news/news';
     CouponPage,
     CouponDetailPage,
     NewsPage,
+    NewsDetailPage,
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Storage
+  ]
 })
-export class AppModule {}
+
+export class AppModule {
+}
