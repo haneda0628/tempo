@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Headers, RequestOptions, Http} from '@angular/http';
 import { Constants } from '../../app/constants';
-import { Storage } from '@ionic/storage';
 import { HomePage } from "../home/home";
+
+import { Headers, RequestOptions, Http} from '@angular/http';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'page-link',
@@ -15,6 +17,7 @@ export class LinkPage {
   email = "";
   password = "";
   tel = "";
+
 
   constructor(private nav:NavController, http:Http, public strg:Storage) {
     this.nav = nav;

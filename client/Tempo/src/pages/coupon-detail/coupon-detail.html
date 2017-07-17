@@ -1,16 +1,22 @@
 <ion-header>
-  <ion-navbar align-title="center">
+  <ion-navbar>
     <button ion-button style="height:100%;" menuToggle>
       <img src="assets/images/a-19.png" style="vertical-align: middle;"/>
     </button>
     <ion-title style="padding:0;">
-      <img src="assets/images/a-21.png" style="width:30%; float:left;" padding-vertical/>
-      <img src="assets/images/a-20.png" style="width:25%; float:left;" padding-vertical/>
-      <span style="color:#fff;">600pt</span>
-      <img src="assets/images/a-18.png" style="float:right;" padding-vertical/>
+      <table class="ion-title-table">
+        <tr>
+          <td><img src="assets/images/a-21.png" style="padding:0 3px;"/></td>
+          <td><img src="assets/images/a-20.png" style="padding:0 3px;"/></td>
+          <td><span class="point-header">600pt</span></td>
+          <td style="min-width: 70px;"><img src="assets/images/a-18.png" style="float:right;width: 68px; height:60px;"/></td>
+        </tr>
+      </table>
+
     </ion-title>
   </ion-navbar>
 </ion-header>
+
 
 <ion-content style="background-color: #F4EBC7;">
   <!--
@@ -31,32 +37,30 @@
           <img src="assets/images/a-41.png" style="width:70px;height:70px;margin:20px;"/>
         </td>
         <td>
-          <span style="color:#FFF; font-size:20px;">20%引きクーポン</span>
+          <span style="color:#FFF; font-size:20px;">{{coupon.title}}</span>
         </td>
       </tr>
     </table>
   </div>
   <div style="background-color:#00B4F0;margin-top:-5px;padding-bottom:20px;">
     <div class="coupon-box" style="width:90%; padding:5px; background-repeat: no-repeat; margin:auto; background-color:#FFF;margin:auto;margin-top:0px;margin-bottom:5px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;">
-      aaaaaaaa<br/>
-      aaaaaaaa
+      {{coupon.contents}}
     </div>
     <div class="coupon-box" style="vertical-align: top; width:90%; padding:5px; background-repeat: no-repeat; margin:auto; background-color:#FFF;margin:auto;margin-top:5px;margin-bottom:0px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;">
       <table class="" style="width:90%">
         <tr>
-          <td style="width:30%;">提示条件</td>
-          <td>提示条件１</td>
+          <td style="width:30%;">提示条件：</td>
+          <td>{{coupon.offer_condition}}</td>
         </tr>
         <tr>
           <td>利用条件：</td>
           <td>
-            <p>利用条件１</p>
-            <p>利用条件２</p>
+            <p>{{coupon.use_condition}}</p>
           </td>
         </tr>
         <tr>
-          <td>有効期限</td>
-          <td><p>利用条件１</p></td>
+          <td>有効条件：</td>
+          <td><p>{{coupon.effectiveness_condition}}</p></td>
         </tr>
       </table>
     </div>

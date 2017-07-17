@@ -4,23 +4,21 @@
       <img src="assets/images/a-19.png" style="vertical-align: middle;"/>
     </button>
     <ion-title style="padding:0;">
-      <table style="width:100%;">
+      <table class="ion-title-table">
         <tr>
           <td><img src="assets/images/a-21.png" style="padding:0 3px;"/></td>
           <td><img src="assets/images/a-20.png" style="padding:0 3px;"/></td>
-          <td><span style="color:#fff;padding:0 3px;">600pt</span></td>
+          <td><span class="point-header">600pt</span></td>
           <td style="min-width: 70px;"><img src="assets/images/a-18.png" style="float:right;width: 68px; height:60px;"/></td>
         </tr>
       </table>
-
-
 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content style="background-color: #FFA5A0">
-  <div style="width:100%;height:250px;background-color:#2ec95c;padding:0;margin:0;">
+  <div id="slide-space" style="">
     <ion-slides [options]="mySlideOptions">
       <ion-slide *ngFor="let slide of slides">
         <img [src]="slide">
@@ -31,39 +29,39 @@
     <img src="assets/images/a-23.png"/>
   </div>
   <div style="background-color: #FFA5A0;">
-    <table style="width:100%;">
+    <table style="width:100%;" id="top-table">
       <tr>
         <td>
-          <button style="padding:0;height:70px;" ion-button block clear (click)="call();">
+          <button class="top-botton" ion-button block clear (click)="call();">
             <img src="assets/images/a-24.png"/>
           </button>
         </td>
         <td>
-          <button style="padding:0;height:70px;" ion-button block clear (click)="consult_by_email();">
+          <button class="top-botton" ion-button block clear (click)="consult_by_email();">
             <img src="assets/images/a-29.png"/>
           </button>
         </td>
       </tr>
       <tr>
         <td>
-          <button style="padding:0;height:70px;" ion-button block clear (click)="go_to_news();">
+          <button class="top-botton" ion-button block clear (click)="go_to_news();">
             <img src="assets/images/a-25.png"/>
           </button>
         </td>
         <td>
-          <button style="padding:0;height:70px;" ion-button block clear (click)="go_to_coupon();">
+          <button class="top-botton" ion-button block clear (click)="go_to_coupon();">
             <img src="assets/images/a-28.png"/>
           </button>
         </td>
       </tr>
       <tr>
         <td>
-          <button style="padding:0;height:70px;" ion-button block clear (click)="go_to_shopping();">
+          <button class="top-botton" ion-button block clear (click)="go_to_shopping();">
             <img src="assets/images/a-26.png"/>
           </button>
         </td>
         <td>
-          <button style="padding:0;height:70px;" ion-button block clear (click)="show_special_goods();">
+          <button class="top-botton" ion-button block clear (click)="show_special_goods();">
             <img src="assets/images/a-27.png"/>
           </button>
         </td>

@@ -4,10 +4,15 @@
       <img src="assets/images/a-19.png" style="vertical-align: middle;"/>
     </button>
     <ion-title style="padding:0;">
-      <img src="assets/images/a-21.png" style="width:30%;margin-bottom:10px;"/>
-      <img src="assets/images/a-20.png" style="width:25%;margin-bottom:10px;"/>
-      <span style="color:#fff;width:25%;">600pt</span>
-      <img src="assets/images/a-18.png"/>
+      <table class="ion-title-table">
+        <tr>
+          <td><img src="assets/images/a-21.png" style="padding:0 3px;"/></td>
+          <td><img src="assets/images/a-20.png" style="padding:0 3px;"/></td>
+          <td><span class="point-header">600pt</span></td>
+          <td style="min-width: 70px;"><img src="assets/images/a-18.png" style="float:right;width: 68px; height:60px;"/></td>
+        </tr>
+      </table>
+
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -18,27 +23,15 @@
   </div>
 
   <ion-list>
-    <button ion-item (click)="move_to_detail();">
+    <button ion-item (click)="move_to_detail(n);"  *ngFor="let n of news">
       <div style="float:left; width:30%;">
-        <img style="padding:10px 5px;" src="assets/images/newsimage.png">
+        <img style="padding:10px 5px;" src="{{url}}{{n.id}}/{{n.imageURL}}">
       </div>
       <div style="padding-right:10px;vertical-align: text-top; float:left; width:70%;">
-        <p style="padding:0;margin:0;">2017/3/3</p>
-        <h3 style="padding:0;margin:0;">イベントがあります！</h3>
-        <p style="padding:0;margin:0;color:#333;margin-top:5px;">コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー</p>
+        <p style="padding:0;margin:0;">{{n.created}}</p>
+        <h3 style="padding:0;margin:0;">{{n.title}}</h3>
+        <p style="padding:0;margin:0;color:#333;margin-top:5px;">{{n.contents}}</p>
       </div>
-    </button>
-    <button ion-item (click)="move_to_detail();">
-      <button ion-item>
-        <div style="float:left; width:30%;">
-          <img style="padding:10px 5px;" src="assets/images/newsimage.png">
-        </div>
-        <div style="padding-right:10px;vertical-align: text-top; float:left; width:70%;">
-          <p style="padding:0;margin:0;">2017/3/3</p>
-          <h3 style="padding:0;margin:0;">イベントがあります！</h3>
-          <p style="padding:0;margin:0;color:#333;margin-top:5px;">コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー</p>
-        </div>
-      </button>
     </button>
   </ion-list>
 

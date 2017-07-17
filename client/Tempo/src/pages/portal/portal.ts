@@ -19,9 +19,10 @@ export class PortalPage {
   constructor(public nav: NavController) {
     this.nav = nav;
     this.slides = [
-      Constants.SERVER_URL + '/app/webroot/images/slide/image1.jpg',
-      Constants.SERVER_URL + '/app/webroot/images/slide/image2.jpg',
-      Constants.SERVER_URL + '/app/webroot/images/slide/image3.jpg'
+      //Constants.SERVER_URL + '/app/webroot/images/slide/image1.jpg',
+      //Constants.SERVER_URL + '/app/webroot/images/slide/image2.jpg',
+      //Constants.SERVER_URL + '/app/webroot/images/slide/image3.jpg'
+      'assets/images/top-03.jpg'
     ];
   }
 
@@ -40,6 +41,8 @@ export class PortalPage {
 
   go_to_shopping() {
     console.log("news.");
+    location.href = 'http://daisharin-kunitachi.cclselect.com/';
+
   }
 
   consult_by_email() {
@@ -56,7 +59,7 @@ export class PortalPage {
 
   show_special_goods() {
     console.log("goods.");
-    location.href = 'http://';
+    location.href = 'http://daisharin-kunitachi.cclselect.com/';
 
   }
 

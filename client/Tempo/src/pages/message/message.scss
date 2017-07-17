@@ -6,4 +6,120 @@ page-message {
   .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
     color:#FFF;
   }
+
+  .ion-label {
+
+  }
+
+  /* チャットレイアウト */
+  .ion-title-table {
+    //margin-left:60px;
+  }
+
+  .chat-box {
+    width: 100%;
+    height: auto;
+    overflow: hidden; /*floatの解除*/
+  }
+  .chat-face {
+    float: left;
+    margin-right: -120px;
+  }
+  .chat-face img{
+    width:50px;
+    height:50px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 4px #ddd;
+  }
+  .chat-area {
+    width: 100%;
+    float: right;
+  }
+  .chat-hukidashi-left {
+    /*display: inline-block;*/ /*コメントの文字数に合わせて可変*/
+    max-width: 80%;
+    word-wrap : break-word;
+    overflow-wrap: break-word;
+    padding: 10px 15px;
+    margin-left: 10px;
+    margin-top: 0px;
+    font-size:10.5px;
+    color:#333;
+    /* border: 1px solid gray; ←削除 */
+    border-radius: 10px;
+    position: relative; /*追記*/
+    background-color: #dddddd; /*追記*/
+    float:left;
+  }
+
+  .chat-hukidashi-right {
+    /*display: inline-block;*/ /*コメントの文字数に合わせて可変*/
+    max-width: 80%;
+    word-wrap : break-word;
+    overflow-wrap: break-word;
+    padding: 10px 15px;
+    /*margin-left: 10px;*/
+    margin-top: 0px;
+    font-size:10.5px;
+    color:#fff;
+    /* border: 1px solid gray; ←削除 */
+    border-radius: 10px;
+    position: relative; /*追記*/
+    background-color: #15AEF5; /*追記*/
+    float:right;
+  }
+
+
+  .item-md {
+    background-color: transparent;
+  }
+
+  /* ↓追記↓ */
+  /*
+  .chat-hukidashi:after {
+    content: "";
+    position: absolute;
+    top: 50%; left: -10px;
+    margin-top: -10px;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #D9F0FF transparent transparent;
+  }
+  */
+  .someone {
+    background-color: #BCF5A9;
+  }
+  .someone:after {
+    border-color: transparent #BCF5A9 transparent transparent;
+  }
+
+  .chat-hukidashi-left p {
+    white-space : normal;
+    word-wrap : break-word;
+    color:#2d2d2d;
+  }
+
+  .chat-hukidashi-right p {
+    white-space : normal;
+    word-wrap : break-word;
+    color:#FFF;
+  }
+
+  ion-input, ion-textarea {
+    background-color: #FFFFFF;
+  }
+  /* ↑追記↑ */
+
+  .message-text {
+    float:left;
+    width:80%;
+  }
+
+  .message-send {
+    float:left;
+    width:18%;
+  }
 }

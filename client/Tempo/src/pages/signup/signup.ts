@@ -60,16 +60,6 @@ export class SignUpPage {
 
   register() {
     console.log("go to home.");
-    //console.log(this.firstname);
-    // console.log(this.lastname);
-    // console.log(this.gender);
-    // console.log(this.address);
-    // console.log(this.email);
-    // console.log(this.tel);
-    // console.log(this.password);
-    // console.log(this.year);
-    // console.log(this.month);
-    // console.log(this.day);
 
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');

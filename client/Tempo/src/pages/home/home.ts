@@ -15,7 +15,6 @@ import { NewsPage } from '../news/news';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-
 export class HomePage {
   @ViewChild(Nav) nav:Nav;
   rootPage: any = PortalPage;
@@ -26,7 +25,7 @@ export class HomePage {
     public menu: MenuController
   ) {
     //nav.setRoot(ContactPage);
-
+    //nav.setRoot(HomePage);
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'HOME', component: HomePage },
@@ -38,6 +37,8 @@ export class HomePage {
       { title: 'アクセス', component:AccessPage},
       { title: '設定', component:SettingsPage},
     ];
+
+
   }
 
   openPage(page) {

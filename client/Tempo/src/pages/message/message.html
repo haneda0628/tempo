@@ -4,14 +4,57 @@
       <img src="assets/images/a-19.png" style="vertical-align: middle;"/>
     </button>
     <ion-title style="padding:0;">
-      <img src="assets/images/a-21.png" style="width:30%;margin-bottom:10px;"/>
-      <img src="assets/images/a-20.png" style="width:25%;margin-bottom:10px;"/>
-      <span style="color:#fff;width:25%;">600pt</span>
-      <img src="assets/images/a-18.png"/>
+      <table class="ion-title-table">
+        <tr>
+          <td><img src="assets/images/a-21.png" style="padding:0 3px;"/></td>
+          <td><img src="assets/images/a-20.png" style="padding:0 3px;"/></td>
+          <td><span class="point-header">600pt</span></td>
+          <td style="min-width: 70px;"><img src="assets/images/a-18.png" style="float:right;width: 68px; height:60px;"/></td>
+        </tr>
+      </table>
+
     </ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content style="background-color: #F8DB88; height:100%;">
-  <img src="assets/images/a-08.png" style="width:100%;"/>
+  <ion-list no-lines id="item-list">
+      <ion-item  *ngFor="let m of messages" >
+        <div class="chat-box" *ngIf="m.Message.is_received">
+          <!--
+          <div class="chat-face">
+            <img src="assets/images/avater2.png" alt="自分のチャット画像です。">
+          </div>
+          -->
+          <div class="chat-area">
+            <div class="chat-hukidashi-left">
+              <p>{{m.Message.contents}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat-box" *ngIf="!m.Message.is_received">
+          <!--
+          <div class="chat-face">
+            <img src="assets/images/avater2.png" alt="自分のチャット画像です。">
+          </div>
+          -->
+          <div class="chat-area">
+            <div class="chat-hukidashi-right">
+              <p>{{m.Message.contents}}</p>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+  </ion-list>
+  <script>
+    //var itemList = document.getElementById("item-list");
+    //itemList.scrollTop = itemList.scrollHeight
+  </script>
+
 </ion-content>
+<ion-footer>
+  <ion-input class="message-text" type="text"  [(ngModel)]="message" placeholder="Message..."></ion-input>
+  <button ion-button class="message-send" [value]="message" (click)="send();">Send</button>
+
+</ion-footer>

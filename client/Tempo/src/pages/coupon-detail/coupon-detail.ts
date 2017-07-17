@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-
-import { HomePage } from "../home/home";
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-coupon',
@@ -9,8 +7,11 @@ import { HomePage } from "../home/home";
 })
 export class CouponDetailPage {
 
-  constructor(private nav:NavController) {
+  coupon = [];
+
+  constructor(private nav:NavController, navParams : NavParams) {
     this.nav = nav;
+    this.coupon = navParams.get("coupon");
 
   }
 
